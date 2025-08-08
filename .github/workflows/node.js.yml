@@ -34,4 +34,4 @@ jobs:
       run: sudo cp -r /home/ubuntu/Skr-News-suman/_work/Skr-News/Skr-News/build/* /var/www/Skr-News-suman/build
 
     - name : Restart the server
-      run : Pm2 restart Skr-News-suman
+      run : pm2 restart Skr-News-suman
