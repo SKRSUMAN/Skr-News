@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-
     runs-on: suman
 
     strategy:
@@ -24,14 +23,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name : Install Dependecies    
+    - name: Install Dependecies    
       run: npm install --force
 
-    - name : Build the app  
+    - name: Build the app  
       run: npm run build --if-present
 
-    - name : Copy the build files
+    - name: Copy the build files
       run: sudo cp -r /home/ubuntu/Skr-News-suman/_work/Skr-News/Skr-News/build/* /var/www/Skr-News-suman/build
 
-    - name : Restart the server
-      run : pm2 restart Skr-News-suman
+    - name: Restart the server
+      run: pm2 restart Skr-News-suman
