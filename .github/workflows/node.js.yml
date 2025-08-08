@@ -26,10 +26,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name : Install Dependecies   
-    - run: npm install --force
+      run: npm install --force
+      
     - name : Building the app 
-    - run: npm run build 
+      run: npm run build 
+      
     - name : Copying the build file
-    - run: sudo cp -r /home/ubuntu/Skr-News/_work/Skr-News/Skr-News/build/* /var/www/Skr-News/build
+      run: sudo cp -r /home/ubuntu/Skr-News/_work/Skr-News/Skr-News/build/* /var/www/Skr-News/build
+      
     - name : restart the server
-    - run: pm2 restart Skr-news
+      run: pm2 restart Skr-news
