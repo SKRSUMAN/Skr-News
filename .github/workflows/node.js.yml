@@ -31,7 +31,7 @@ jobs:
       run: npm run build --if-present
 
     - name: Copy the build file
-      run: sudo cp -r /home/ubuntu/Skr-News-master/_work/Skr-news/Skr-news/build/* /var/www/Skr-News-master/build
+      run: sudo cp -r /home/ubuntu/Skr-News-master/_work/Skr-News/Skr-News/build/* /var/www/Skr-News-master/build
 
     - name: Restart the server
       run: pm2 restart Skr-News-master
