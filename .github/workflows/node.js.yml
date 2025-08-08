@@ -9,6 +9,7 @@ on:
 
 jobs:
   build:
+  
     runs-on: suman
 
     strategy:
@@ -29,7 +30,7 @@ jobs:
     - name: Build the app  
       run: npm run build --if-present
 
-    - name: Copy the build files
+    - name: Copy the build file
       run: sudo cp -r /home/ubuntu/Skr-News-suman/_work/Skr-News/Skr-News/build/* /var/www/Skr-News-suman/build
 
     - name: Restart the server
